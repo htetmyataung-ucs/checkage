@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculate Example</title>
+        <style>
+            *{box-sizing: border-box;}
+            .main
+            {
+                width:250px;
+                height:200px;
+                margin:40px;
+                background-color: whitesmoke;
+                padding:40px;
+            }
+            
+           button{
+               margin-left: 40px;
+           }
+        </style>
+       
+    </head>
+    <body>
+        <div class="main">
+            <form>
+                <label>Enter Your Age</label><br>
+                <input type="date"  id="date"><br><br>
+               
+                <button type="button" onclick="checkAge()">Check Age</button>
+
+            </form>
+            
+        </div>
+        <script>
+           
+            function checkAge()
+            {   
+                var today=new Date();
+                var today1=today.getFullYear();
+                var setDate=document.getElementById("date").value;
+                var setDate1=new Date(setDate);
+                var setDate2=setDate1.getFullYear();
+                if(today1-setDate2 > 18)
+                {
+                    alert("You over 18 years!")
+                }
+                else{
+                    alert("You under 18 years!");
+                }
+            }
+        </script>
+    </body>
+</html>
